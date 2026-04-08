@@ -1,183 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - HICHOU RENT-CAR</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - HICHOU RENT-CAR</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Google Fonts for better look -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1e293b;
+      --card: rgba(255, 255, 255, 0.1);
+      --card-border: rgba(255, 255, 255, 0.18);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #38bdf8;
+      --accent2: #22c55e;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    }
 
-    <style>
-        /* GENERAL STYLING */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background: #f5f7fa;
-            margin: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-        h1, h2, h3, h4 {
-            color: #0a1f44;
-        }
-        h1 {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 32px;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, var(--bg1), var(--bg2));
+      color: var(--text);
+      min-height: 100vh;
+      padding: 30px 15px;
+    }
 
-        /* CONTAINER */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 30px 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+    }
 
-        /* HEADINGS */
-        h2 {
-            font-size: 28px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #0a1f44;
-            padding-bottom: 5px;
-        }
-        h3 {
-            font-size: 22px;
-            margin-top: 25px;
-            margin-bottom: 15px;
-        }
-        h4 {
-            font-size: 18px;
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
 
-        /* LISTS */
-        ul {
-            list-style: disc inside;
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-        /* LINKS */
-        a {
-            color: #0a1f44;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
+    .badge {
+      display: inline-block;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.15);
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
 
-        /* BACK BUTTON */
-        .back-button {
-            margin-top: 30px;
-            text-align: center;
-        }
-        .back-button a {
-            display: inline-block;
-            background: #0a1f44;
-            color: #fff;
-            padding: 12px 25px;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .back-button a:hover {
-            background: #06213b;
-        }
+    h1 {
+      font-size: 38px;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
 
-        /* LAST UPDATED */
-        .last-updated {
-            margin-top: 30px;
-            font-style: italic;
-            color: #555;
-        }
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px;
-                margin: 20px;
-            }
-            h1 {
-                font-size: 26px;
-            }
-            h2 {
-                font-size: 22px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-            h4 {
-                font-size: 16px;
-            }
-        }
-    </style>
+    .effective-date {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #93c5fd;
+      font-weight: bold;
+    }
+
+    .section {
+      margin-top: 24px;
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 12px;
+      color: #7dd3fc;
+    }
+
+    .section p {
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .section ul {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin-bottom: 10px;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .highlight {
+      color: #86efac;
+      font-weight: bold;
+    }
+
+    .contact-box {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 16px;
+      background: rgba(34, 197, 94, 0.12);
+      border: 1px solid rgba(34, 197, 94, 0.25);
+    }
+
+    .contact-box p {
+      margin-bottom: 8px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 26px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .top-actions {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      .section h2 {
+        font-size: 20px;
+      }
+
+      .section p,
+      .section li {
+        font-size: 15px;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: black;
+        padding: 0;
+      }
+
+      .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: white;
+        color: black;
+      }
+
+      .section {
+        background: #fafafa;
+        border: 1px solid #ddd;
+      }
+
+      .top-actions {
+        display: none;
+      }
+
+      .subtitle, .footer, .section p, .section li {
+        color: #222;
+      }
+
+      h1, h2 {
+        color: #111;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <div class="top-actions">
+      <button class="btn btn-primary" onclick="window.print()">Print / Save as PDF</button>
+      <button class="btn btn-secondary" onclick="toggleTheme()">Toggle Theme</button>
+    </div>
 
-    <!-- Privacy Policy Content -->
-    <section class="privacy-page">
-        <div class="container">
-            <h1>Privacy Policy</h1>
+    <div class="card">
+      <div class="header">
+        <div class="badge">PLAY STORE PRIVACY POLICY</div>
+        <h1>Privacy Policy for HICHOU RENT-CAR</h1>
+        <p class="subtitle">
+          HICHOU RENT-CAR respects user privacy. This Privacy Policy explains how the mobile app works
+          and how information is handled.
+        </p>
+        <div class="effective-date">Effective date: March 29, 2026</div>
+      </div>
 
-            <h2>HICHOU RENT-CAR</h2>
+      <div class="section">
+        <h2>1. Information Collection</h2>
+        <p>
+          HICHOU RENT-CAR <span class="highlight">does not collect personal data</span> for transmission
+          to the company or to third parties through the app.
+        </p>
+      </div>
 
-            <h3>1. Company Information</h3>
-            <ul>
-                <li><strong>Company Name:</strong> HICHOU RENT-CAR</li>
-                <li><strong>Address:</strong> 21 Bd De La Résistance, Bureau N° 9, Tetouan, 93000, Morocco</li>
-                <li><strong>RC:</strong> 10229 (Tribunal de Tetouan)</li>
-                <li><strong>ICE:</strong> 000018781000029</li>
-                <li><strong>DUNS Number:</strong> 353817098</li>
-                <li><strong>Legal Form:</strong> SARL AU</li>
-                <li><strong>Capital:</strong> 60,000 DH</li>
-            </ul>
+      <div class="section">
+        <h2>2. Local Device Storage</h2>
+        <p>
+          If a user saves a request draft, that draft information is stored
+          <span class="highlight">locally on the same device</span> using app storage.
+        </p>
+        <ul>
+          <li>Customer name or draft reference entered by the user</li>
+          <li>Selected vehicle</li>
+          <li>Rental dates</li>
+          <li>Estimate details</li>
+          <li>Notes related to the draft</li>
+        </ul>
+        <p>
+          This saved information remains on the device unless the user deletes it in the app
+          or clears app data from device settings.
+        </p>
+      </div>
 
-            <h3>2. Information We Collect</h3>
-            <ul>
-                <li>Name and contact details</li>
-                <li>Email address</li>
-                <li>Rental inquiries and messages</li>
-            </ul>
+      <div class="section">
+        <h2>3. Accounts</h2>
+        <p>
+          The app does <span class="highlight">not require account registration or sign-in</span>.
+        </p>
+      </div>
 
-            <h3>3. How We Use Your Information</h3>
-            <ul>
-                <li>Respond to inquiries</li>
-                <li>Provide rental services</li>
-                <li>Improve website experience</li>
-                <li>Send updates and offers</li>
-            </ul>
+      <div class="section">
+        <h2>4. Payments</h2>
+        <p>
+          The app does <span class="highlight">not process payments</span> inside the app.
+        </p>
+      </div>
 
-            <h3>4. Data Protection</h3>
-            <p>We implement appropriate security measures to protect your data from unauthorized access or disclosure.</p>
+      <div class="section">
+        <h2>5. Analytics and Advertising</h2>
+        <p>
+          The app does not include advertising services and does not use analytics tools
+          for advertising or marketing tracking.
+        </p>
+      </div>
 
-            <h3>5. Third-Party Sharing</h3>
-            <p>We do not sell or rent your personal information. Sharing occurs only when required by law.</p>
+      <div class="section">
+        <h2>6. Sharing of Information</h2>
+        <p>
+          The app does <span class="highlight">not share saved draft information</span> with third parties through the app.
+        </p>
+      </div>
 
-            <h3>6. Cookies</h3>
-            <p>Our website may use cookies to enhance your experience. You can manage cookies in your browser settings.</p>
+      <div class="section">
+        <h2>7. Permissions and Network Use</h2>
+        <p>
+          The app is designed for offline use. It opens the phone dialer when the user chooses
+          to call the business contact number. The app does not require dangerous permissions
+          for its main functions.
+        </p>
+      </div>
 
-            <h3>7. Your Rights</h3>
-            <ul>
-                <li>Access your personal data</li>
-                <li>Request correction or deletion</li>
-                <li>Opt-out of marketing communications</li>
-            </ul>
+      <div class="section">
+        <h2>8. User Control</h2>
+        <ul>
+          <li>Save request drafts locally</li>
+          <li>Delete saved drafts inside the app</li>
+          <li>Clear app data from device settings to remove locally stored information</li>
+        </ul>
+      </div>
 
-            <h3>8. Contact</h3>
-            <p>For privacy inquiries, email us at <strong>info@hichourentcar.ma</strong>.</p>
+      <div class="section">
+        <h2>9. Children</h2>
+        <p>
+          The app is not designed as a service specifically directed to children.
+        </p>
+      </div>
 
-            <p class="last-updated"><strong>Last Updated:</strong> February 4, 2026</p>
-
-            <div class="back-button">
-                <a href="index.html">← Back to Home</a>
-            </div>
+      <div class="section">
+        <h2>10. Contact</h2>
+        <p>For questions about this Privacy Policy or the company information shown in the app:</p>
+        <div class="contact-box">
+          <p><strong>HICHOU RENT-CAR</strong></p>
+          <p><strong>Phone:</strong> +2126220908929</p>
+          <p><strong>Address:</strong> 21 Bd De La Resistance, Bureau No. 9, Tetouan, Morocco</p>
         </div>
-    </section>
+      </div>
 
+      <div class="footer">
+        © 2026 HICHOU RENT-CAR. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let dark = true;
+
+    function toggleTheme() {
+      if (dark) {
+        document.documentElement.style.setProperty('--bg1', '#f8fafc');
+        document.documentElement.style.setProperty('--bg2', '#e2e8f0');
+        document.documentElement.style.setProperty('--card', 'rgba(255,255,255,0.92)');
+        document.documentElement.style.setProperty('--card-border', 'rgba(15,23,42,0.08)');
+        document.documentElement.style.setProperty('--text', '#0f172a');
+        document.documentElement.style.setProperty('--muted', '#475569');
+      } else {
+        document.documentElement.style.setProperty('--bg1', '#0f172a');
+        document.documentElement.style.setProperty('--bg2', '#1e293b');
+        document.documentElement.style.setProperty('--card', 'rgba(255, 255, 255, 0.1)');
+        document.documentElement.style.setProperty('--card-border', 'rgba(255, 255, 255, 0.18)');
+        document.documentElement.style.setProperty('--text', '#f8fafc');
+        document.documentElement.style.setProperty('--muted', '#cbd5e1');
+      }
+      dark = !dark;
+    }
+  </script>
 </body>
 </html>
